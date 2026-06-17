@@ -1,0 +1,52 @@
+units:
+  area: m^2
+  length: m
+  width: m
+  height: m
+  bending_radius: \?
+  volume_flow_ratio is defined as: volume_flow (in the direction that is considered) / volume_flow_main
+  volume_flow_ratio: \-
+  outlet_area: m²
+  zeta: with respect to velocity^2, so dimensionless
+
+
+system:
+  width: 0.6
+  height: 0.2
+  elements:
+  ##  Komponente -> VSR + Silencer
+    1:
+      length: 1.25
+      name: duct
+    2:
+      length: 0.25
+      width: 0.8
+      height: 0.3
+      name: duct
+    3:
+      main_width: 0.8
+      main_height: 0.3
+      target_width: 0.14
+      target_height: 0.14
+      neighbour_width: 0.8
+      neighbour_height: 0.3
+      direction: bend
+      volume_flow_ratio: 0.0909
+      name: rect_branch
+    4:
+      diameter: 0.14
+      length: 3.45
+      name: duct
+    5:
+      width: 0.14
+      height: 0.14
+      zeta: 30
+      outlet_area: 1.06
+      outlet_location: in der Fläche
+      diffuser_type: Gitterstahlprofil ungedrosselt
+      name: air_diffuser
+  ##  11 gleiche  Luftdurchlässe
+      
+  limits:
+    sound_power_level:
+      max: 100

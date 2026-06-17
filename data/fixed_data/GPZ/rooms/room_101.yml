@@ -1,0 +1,33 @@
+building: GPZ
+room_model: 1 # 0: simple, 1: advanced, 2: radiation without airflow
+
+area:
+  value: 106.44
+  unit: meter^2
+
+height:
+  value: 2.7
+  unit: meter
+
+number_of_air_diffusers: 5
+
+reverberation_time:
+  value: 1
+  unit: second
+
+min_distance:
+  value: 1.7
+  unit: meter
+  comment: minimum distance, calculated for an air diffuser directly above an average person sitting (average person sitting is 1.3 m tall)
+
+angle_of_radiation:
+  value: 0
+  unit: degree
+
+location_of_sound_source_opening: 1
+
+area_of_outlet:
+  value: 1.06
+  unit: meter^2
+
+max_sound_power_level: 100

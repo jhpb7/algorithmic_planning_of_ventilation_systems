@@ -1,0 +1,249 @@
+elements:
+  1:
+    area_main_line: 
+      unit: meter^2
+      value: 0.175
+    area_branch:
+      unit: meter^2
+      value: 0.035
+    area_neighbouring_branch:
+      unit: meter^2
+      value: 0.105
+    bending_radius:
+      unit: meter
+      value: 0.15
+    bending:
+      value: "Ja"
+    name: rectangular_branch
+  2:
+    area: 
+      unit: meter^2
+      value: 0.035
+    length:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.35
+    side_length2:
+      unit: meter
+      value: 0.1
+    name: rectangular_duct
+  3:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 0.65
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  4:
+    area: 
+      unit: meter^2
+      value: 0.05
+    bending_radius:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_bending
+  5:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 0.7
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  6:
+    area: 
+      unit: meter^2
+      value: 0.05
+    bending_radius:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_bending
+  7:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 1.35
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+##  Komponente
+  8:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 0.9
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  9:
+    area: 
+      unit: meter^2
+      value: 0.05
+    bending_radius:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_bending
+  10:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 7.95
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+##  Komponente -> vernachlässigt
+  11:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 8.53
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  12:
+    area: 
+      unit: meter^2
+      value: 0.05
+    bending_radius:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_bending
+  13:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 2.25
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  14:
+    area: 
+      unit: meter^2
+      value: 0.05
+    bending_radius:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_bending
+  15:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 0.32
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  16:
+    area: 
+      unit: meter^2
+      value: 0.02
+    length:
+      unit: meter
+      value: 0.3
+    side_length1:
+      unit: meter
+      value: 0.2
+    side_length2:
+      unit: meter
+      value: 0.1
+    name: rectangular_duct
+  ##  Komponente -> VSR
+  # 17:
+  #   area: 
+  #     unit: meter^2
+  #     value: 0.02
+  #   length:
+  #     unit: meter
+  #     value: 0.55
+  #   side_length1:
+  #     unit: meter
+  #     value: 0.2
+  #   side_length2:
+  #     unit: meter
+  #     value: 0.1
+  #   name: rectangular_duct
+  ##  Komponente -> Silencer
+    
+limits:
+  sound_power_level:
+    max: 100

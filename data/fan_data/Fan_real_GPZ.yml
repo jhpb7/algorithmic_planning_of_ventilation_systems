@@ -1,0 +1,83 @@
+comment: echt verbauter fan im Gerhard-Pahl Zentrum. Ist ein Ziehl-Abegg Cpro RH40C-ZID.GG.CR
+ansatz:
+  ansatz: radial
+  cost:
+    o1:
+      ansatz_func:
+        - gamma[0]*d
+        - gamma[1]
+      ansatz_param:
+        1: 4325.9
+        2: -385.12
+      order: 1
+      unit: Euro
+  power:
+    o3:
+      ansatz_func:
+        - beta[0]*q**3/d**4
+        - beta[1]*q**2*n/d
+        - beta[2]*q*n**2*d**2
+        - beta[3]*n**3*d**5
+        - beta[4]
+      ansatz_param:
+        1: -0.031507680079674
+        2: 0.012013196155046263
+        3: 8.658480030679755
+        4: 38.747352540630516
+        5: 0.026086678275392843
+      order: 3
+      unit: W
+  pressure:
+    o2:
+      ansatz_func:
+        - alpha[0]*q**2/d**4
+        - alpha[1]*q*n/d
+        - alpha[2]*n**2*d**2
+      ansatz_param:
+        1: -0.040782296368499414
+        2: 0.26471540654415415
+        3: 5.8204370970882655
+      order: 2
+      unit: Pa
+  rotational_speed:
+    o1:
+      ansatz_func: n(d) = a1*d + a2. where [x] = m and [d] = 1/m
+      ansatz_param:
+        1: 8000
+        2: 0
+      comment:
+        the fit is sometimes useful to know the maximum speed of the fan. e.g.
+        in acoustics for obtaining the Strouhal-number
+      order: 1
+      unit: 1/min
+fantype: radial
+limits:
+  diameter:
+    comment: None
+    max: 0.4
+    min: 0.4
+    unit: m
+  power:
+    comment: None
+    max: 1
+    max_dim: 3275.05216
+    min: 0
+    unit: W
+  pressure:
+    comment: None
+    max: 1
+    max_dim: 1551.927
+    min: 0
+    unit: Pa
+  rotational_speed:
+    comment: approximated no minimum
+    max: 1
+    min: 0
+    unit: 1
+  volume_flow:
+    comment: None
+    max: 1
+    max_dim: 2.587125
+    min: 0
+    unit: m^3/s
+modelname: Fan_real_GPZ

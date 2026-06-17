@@ -1,0 +1,33 @@
+units:
+  area: m^2
+  length: m
+  width: m
+  height: m
+  bending_radius: \?
+  # volume_flow_ratio is defined as: volume_flow_straight / volume_flow_in
+  volume_flow_ratio: \-
+  zeta: with respect to velocity^2, so dimensionless
+
+
+system:
+  width: 0.2
+  height: 0.2
+  elements:
+    1:
+      name: reheater
+      zeta: 8
+    2:
+      name: rect_branch
+      direction: straight
+      volume_flow_ratio: 0.5
+      width: 0.2
+      height: 0.2
+    3:
+      name: duct
+      length: 4
+    4:
+      name: air_diffuser
+      comment: tellerventil, für flaechenberechnung so getan als sei es eckig
+      diffuser_type: quadratischer Vierwegedurchlass
+      outlet_location: im Raum
+      zeta: 33

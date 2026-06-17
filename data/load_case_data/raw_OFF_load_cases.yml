@@ -1,0 +1,27 @@
+rooms: ["C4", "D41", "D42", "F4", "G4", "H4", "I4"]
+rooms_to_merge:
+  D4: [D41, D42]
+roomtype:
+    C4: open-plan_office
+    D41: kitchen
+    D42: sanitary
+    F4: meeting_room
+    G4: open-plan_office
+    H4: open-plan_office
+    I4: meeting_room
+area:
+    C4: 79.6
+    D41: 21.3
+    D42: 21.3
+    F4: 28.4
+    G4: 51.2
+    H4: 49.7
+    I4: 19.9
+max_num_person:
+    C4: 8
+    D41: 15
+    D42: 5
+    F4: 10
+    G4: 5
+    H4: 5
+    I4: 6

@@ -1,0 +1,91 @@
+elements:
+  1:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 0.93
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  2:
+    area: 
+      unit: meter^2
+      value: 0.05
+    bending_radius:
+      unit: meter
+      value: 0.15
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_bending
+  3:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 8.13
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  ##Komponente -> ne Klappe, wird ignoriert
+  4:
+    area: 
+      unit: meter^2
+      value: 0.05
+    length:
+      unit: meter
+      value: 1.92
+    side_length1:
+      unit: meter
+      value: 0.25
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  5:
+    area: 
+      unit: meter^2
+      value: 0.08
+    length:
+      unit: meter
+      value: 0.48
+    side_length1:
+      unit: meter
+      value: 0.4
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+  6:
+    area: 
+      unit: meter^2
+      value: 0.08
+    length:
+      unit: meter
+      value: 0.96
+    side_length1:
+      unit: meter
+      value: 0.4
+    side_length2:
+      unit: meter
+      value: 0.2
+    name: rectangular_duct
+##Komponente --> VSR und Silencer
+    
+limits:
+  sound_power_level:
+    max: 100

@@ -1,0 +1,35 @@
+building: GPZ
+room_model: 2 # 0: simple, 1: advanced, 2: radiation without airflow
+
+area:
+  value: 17
+  unit: meter^2
+
+height:
+  value: 2.7
+  unit: meter
+
+reverberation_time:
+  value: 1
+  unit: second
+
+duct_length:
+  value: 8
+  unit: meter
+
+duct_height:
+  value: 0.2
+  unit: meter
+
+duct_width:
+  value: 0.25
+  unit: meter
+
+duct_thickness:
+  value: 1
+  unit: millimeter
+
+solid_angle_index:
+  value: 3
+
+max_sound_power_level: 100

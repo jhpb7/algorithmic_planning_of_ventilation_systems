@@ -1,0 +1,1562 @@
+scenario:
+  '127':
+    room:
+      0C4:
+        mean: 199.0
+      0D4:
+        mean: 58.0
+      0F4:
+        mean: 71.0
+      0G4:
+        mean: 128.0
+      0H4:
+        mean: 124.0
+      0I4:
+        mean: 50.0
+      10C4:
+        mean: 199.0
+      10D4:
+        mean: 58.0
+      10F4:
+        mean: 71.0
+      10G4:
+        mean: 128.0
+      10H4:
+        mean: 180.0
+      10I4:
+        mean: 50.0
+      11C4:
+        mean: 240.0
+      11D4:
+        mean: 58.0
+      11F4:
+        mean: 71.0
+      11G4:
+        mean: 128.0
+      11H4:
+        mean: 124.0
+      11I4:
+        mean: 50.0
+      12C4:
+        mean: 199.0
+      12D4:
+        mean: 53.0
+      12F4:
+        mean: 71.0
+      12G4:
+        mean: 128.0
+      12H4:
+        mean: 124.0
+      12I4:
+        mean: 50.0
+      13C4:
+        mean: 199.0
+      13D4:
+        mean: 58.0
+      13F4:
+        mean: 71.0
+      13G4:
+        mean: 180.0
+      13H4:
+        mean: 240.0
+      13I4:
+        mean: 50.0
+      14C4:
+        mean: 199.0
+      14D4:
+        mean: 53.0
+      14F4:
+        mean: 71.0
+      14G4:
+        mean: 180.0
+      14H4:
+        mean: 124.0
+      14I4:
+        mean: 50.0
+      15C4:
+        mean: 199.0
+      15D4:
+        mean: 63.0
+      15F4:
+        mean: 71.0
+      15G4:
+        mean: 128.0
+      15H4:
+        mean: 124.0
+      15I4:
+        mean: 50.0
+      1C4:
+        mean: 199.0
+      1D4:
+        mean: 53.0
+      1F4:
+        mean: 71.0
+      1G4:
+        mean: 128.0
+      1H4:
+        mean: 124.0
+      1I4:
+        mean: 50.0
+      2C4:
+        mean: 199.0
+      2D4:
+        mean: 53.0
+      2F4:
+        mean: 71.0
+      2G4:
+        mean: 128.0
+      2H4:
+        mean: 124.0
+      2I4:
+        mean: 50.0
+      3C4:
+        mean: 199.0
+      3D4:
+        mean: 53.0
+      3F4:
+        mean: 71.0
+      3G4:
+        mean: 128.0
+      3H4:
+        mean: 124.0
+      3I4:
+        mean: 50.0
+      4C4:
+        mean: 199.0
+      4D4:
+        mean: 53.0
+      4F4:
+        mean: 71.0
+      4G4:
+        mean: 180.0
+      4H4:
+        mean: 124.0
+      4I4:
+        mean: 50.0
+      5C4:
+        mean: 240.0
+      5D4:
+        mean: 53.0
+      5F4:
+        mean: 71.0
+      5G4:
+        mean: 128.0
+      5H4:
+        mean: 124.0
+      5I4:
+        mean: 50.0
+      6C4:
+        mean: 199.0
+      6D4:
+        mean: 58.0
+      6F4:
+        mean: 71.0
+      6G4:
+        mean: 128.0
+      6H4:
+        mean: 124.0
+      6I4:
+        mean: 50.0
+      7C4:
+        mean: 199.0
+      7D4:
+        mean: 63.0
+      7F4:
+        mean: 71.0
+      7G4:
+        mean: 128.0
+      7H4:
+        mean: 124.0
+      7I4:
+        mean: 50.0
+      8C4:
+        mean: 199.0
+      8D4:
+        mean: 85.0
+      8F4:
+        mean: 71.0
+      8G4:
+        mean: 128.0
+      8H4:
+        mean: 124.0
+      8I4:
+        mean: 50.0
+      9C4:
+        mean: 199.0
+      9D4:
+        mean: 53.0
+      9F4:
+        mean: 71.0
+      9G4:
+        mean: 128.0
+      9H4:
+        mean: 124.0
+      9I4:
+        mean: 50.0
+  '383':
+    room:
+      0C4:
+        mean: 199.0
+      0D4:
+        mean: 130.0
+      0F4:
+        mean: 71.0
+      0G4:
+        mean: 180.0
+      0H4:
+        mean: 124.0
+      0I4:
+        mean: 50.0
+      10C4:
+        mean: 199.0
+      10D4:
+        mean: 155.0
+      10F4:
+        mean: 71.0
+      10G4:
+        mean: 128.0
+      10H4:
+        mean: 124.0
+      10I4:
+        mean: 50.0
+      11C4:
+        mean: 199.0
+      11D4:
+        mean: 160.0
+      11F4:
+        mean: 71.0
+      11G4:
+        mean: 128.0
+      11H4:
+        mean: 124.0
+      11I4:
+        mean: 50.0
+      12C4:
+        mean: 199.0
+      12D4:
+        mean: 125.0
+      12F4:
+        mean: 71.0
+      12G4:
+        mean: 128.0
+      12H4:
+        mean: 240.0
+      12I4:
+        mean: 50.0
+      13C4:
+        mean: 199.0
+      13D4:
+        mean: 155.0
+      13F4:
+        mean: 71.0
+      13G4:
+        mean: 180.0
+      13H4:
+        mean: 124.0
+      13I4:
+        mean: 50.0
+      14C4:
+        mean: 360.0
+      14D4:
+        mean: 110.0
+      14F4:
+        mean: 71.0
+      14G4:
+        mean: 128.0
+      14H4:
+        mean: 124.0
+      14I4:
+        mean: 50.0
+      15C4:
+        mean: 240.0
+      15D4:
+        mean: 110.0
+      15F4:
+        mean: 71.0
+      15G4:
+        mean: 180.0
+      15H4:
+        mean: 180.0
+      15I4:
+        mean: 50.0
+      1C4:
+        mean: 240.0
+      1D4:
+        mean: 170.0
+      1F4:
+        mean: 71.0
+      1G4:
+        mean: 128.0
+      1H4:
+        mean: 180.0
+      1I4:
+        mean: 50.0
+      2C4:
+        mean: 199.0
+      2D4:
+        mean: 70.0
+      2F4:
+        mean: 71.0
+      2G4:
+        mean: 128.0
+      2H4:
+        mean: 180.0
+      2I4:
+        mean: 50.0
+      3C4:
+        mean: 199.0
+      3D4:
+        mean: 140.0
+      3F4:
+        mean: 71.0
+      3G4:
+        mean: 128.0
+      3H4:
+        mean: 124.0
+      3I4:
+        mean: 50.0
+      4C4:
+        mean: 240.0
+      4D4:
+        mean: 68.0
+      4F4:
+        mean: 71.0
+      4G4:
+        mean: 128.0
+      4H4:
+        mean: 124.0
+      4I4:
+        mean: 50.0
+      5C4:
+        mean: 240.0
+      5D4:
+        mean: 130.0
+      5F4:
+        mean: 71.0
+      5G4:
+        mean: 128.0
+      5H4:
+        mean: 124.0
+      5I4:
+        mean: 50.0
+      6C4:
+        mean: 199.0
+      6D4:
+        mean: 115.0
+      6F4:
+        mean: 71.0
+      6G4:
+        mean: 240.0
+      6H4:
+        mean: 180.0
+      6I4:
+        mean: 50.0
+      7C4:
+        mean: 300.0
+      7D4:
+        mean: 110.0
+      7F4:
+        mean: 71.0
+      7G4:
+        mean: 128.0
+      7H4:
+        mean: 240.0
+      7I4:
+        mean: 50.0
+      8C4:
+        mean: 199.0
+      8D4:
+        mean: 90.0
+      8F4:
+        mean: 71.0
+      8G4:
+        mean: 240.0
+      8H4:
+        mean: 180.0
+      8I4:
+        mean: 50.0
+      9C4:
+        mean: 360.0
+      9D4:
+        mean: 90.0
+      9F4:
+        mean: 71.0
+      9G4:
+        mean: 128.0
+      9H4:
+        mean: 240.0
+      9I4:
+        mean: 50.0
+  '707':
+    room:
+      0C4:
+        mean: 199.0
+      0D4:
+        mean: 325.0
+      0F4:
+        mean: 71.0
+      0G4:
+        mean: 180.0
+      0H4:
+        mean: 124.0
+      0I4:
+        mean: 50.0
+      10C4:
+        mean: 420.0
+      10D4:
+        mean: 320.0
+      10F4:
+        mean: 71.0
+      10G4:
+        mean: 128.0
+      10H4:
+        mean: 180.0
+      10I4:
+        mean: 50.0
+      11C4:
+        mean: 240.0
+      11D4:
+        mean: 305.0
+      11F4:
+        mean: 71.0
+      11G4:
+        mean: 128.0
+      11H4:
+        mean: 124.0
+      11I4:
+        mean: 50.0
+      12C4:
+        mean: 199.0
+      12D4:
+        mean: 325.0
+      12F4:
+        mean: 71.0
+      12G4:
+        mean: 128.0
+      12H4:
+        mean: 124.0
+      12I4:
+        mean: 50.0
+      13C4:
+        mean: 199.0
+      13D4:
+        mean: 325.0
+      13F4:
+        mean: 71.0
+      13G4:
+        mean: 128.0
+      13H4:
+        mean: 124.0
+      13I4:
+        mean: 50.0
+      14C4:
+        mean: 199.0
+      14D4:
+        mean: 320.0
+      14F4:
+        mean: 71.0
+      14G4:
+        mean: 128.0
+      14H4:
+        mean: 180.0
+      14I4:
+        mean: 50.0
+      15C4:
+        mean: 199.0
+      15D4:
+        mean: 305.0
+      15F4:
+        mean: 71.0
+      15G4:
+        mean: 128.0
+      15H4:
+        mean: 180.0
+      15I4:
+        mean: 50.0
+      1C4:
+        mean: 199.0
+      1D4:
+        mean: 320.0
+      1F4:
+        mean: 71.0
+      1G4:
+        mean: 128.0
+      1H4:
+        mean: 124.0
+      1I4:
+        mean: 50.0
+      2C4:
+        mean: 300.0
+      2D4:
+        mean: 315.0
+      2F4:
+        mean: 71.0
+      2G4:
+        mean: 128.0
+      2H4:
+        mean: 180.0
+      2I4:
+        mean: 50.0
+      3C4:
+        mean: 199.0
+      3D4:
+        mean: 325.0
+      3F4:
+        mean: 71.0
+      3G4:
+        mean: 180.0
+      3H4:
+        mean: 180.0
+      3I4:
+        mean: 50.0
+      4C4:
+        mean: 199.0
+      4D4:
+        mean: 325.0
+      4F4:
+        mean: 71.0
+      4G4:
+        mean: 128.0
+      4H4:
+        mean: 124.0
+      4I4:
+        mean: 50.0
+      5C4:
+        mean: 199.0
+      5D4:
+        mean: 325.0
+      5F4:
+        mean: 71.0
+      5G4:
+        mean: 180.0
+      5H4:
+        mean: 124.0
+      5I4:
+        mean: 50.0
+      6C4:
+        mean: 199.0
+      6D4:
+        mean: 320.0
+      6F4:
+        mean: 71.0
+      6G4:
+        mean: 240.0
+      6H4:
+        mean: 124.0
+      6I4:
+        mean: 50.0
+      7C4:
+        mean: 199.0
+      7D4:
+        mean: 310.0
+      7F4:
+        mean: 71.0
+      7G4:
+        mean: 128.0
+      7H4:
+        mean: 124.0
+      7I4:
+        mean: 50.0
+      8C4:
+        mean: 199.0
+      8D4:
+        mean: 320.0
+      8F4:
+        mean: 71.0
+      8G4:
+        mean: 180.0
+      8H4:
+        mean: 124.0
+      8I4:
+        mean: 50.0
+      9C4:
+        mean: 199.0
+      9D4:
+        mean: 320.0
+      9F4:
+        mean: 71.0
+      9G4:
+        mean: 240.0
+      9H4:
+        mean: 124.0
+      9I4:
+        mean: 50.0
+  '993':
+    room:
+      0C4:
+        mean: 199.0
+      0D4:
+        mean: 185.0
+      0F4:
+        mean: 180.0
+      0G4:
+        mean: 128.0
+      0H4:
+        mean: 180.0
+      0I4:
+        mean: 100.0
+      10C4:
+        mean: 240.0
+      10D4:
+        mean: 205.0
+      10F4:
+        mean: 180.0
+      10G4:
+        mean: 240.0
+      10H4:
+        mean: 240.0
+      10I4:
+        mean: 120.0
+      11C4:
+        mean: 360.0
+      11D4:
+        mean: 195.0
+      11F4:
+        mean: 160.0
+      11G4:
+        mean: 180.0
+      11H4:
+        mean: 240.0
+      11I4:
+        mean: 120.0
+      12C4:
+        mean: 360.0
+      12D4:
+        mean: 230.0
+      12F4:
+        mean: 160.0
+      12G4:
+        mean: 240.0
+      12H4:
+        mean: 124.0
+      12I4:
+        mean: 100.0
+      13C4:
+        mean: 360.0
+      13D4:
+        mean: 170.0
+      13F4:
+        mean: 140.0
+      13G4:
+        mean: 128.0
+      13H4:
+        mean: 124.0
+      13I4:
+        mean: 60.0
+      14C4:
+        mean: 240.0
+      14D4:
+        mean: 180.0
+      14F4:
+        mean: 140.0
+      14G4:
+        mean: 240.0
+      14H4:
+        mean: 240.0
+      14I4:
+        mean: 100.0
+      15C4:
+        mean: 240.0
+      15D4:
+        mean: 145.0
+      15F4:
+        mean: 180.0
+      15G4:
+        mean: 128.0
+      15H4:
+        mean: 124.0
+      15I4:
+        mean: 120.0
+      1C4:
+        mean: 360.0
+      1D4:
+        mean: 180.0
+      1F4:
+        mean: 160.0
+      1G4:
+        mean: 128.0
+      1H4:
+        mean: 240.0
+      1I4:
+        mean: 60.0
+      2C4:
+        mean: 199.0
+      2D4:
+        mean: 90.0
+      2F4:
+        mean: 180.0
+      2G4:
+        mean: 128.0
+      2H4:
+        mean: 180.0
+      2I4:
+        mean: 60.0
+      3C4:
+        mean: 420.0
+      3D4:
+        mean: 200.0
+      3F4:
+        mean: 180.0
+      3G4:
+        mean: 180.0
+      3H4:
+        mean: 180.0
+      3I4:
+        mean: 100.0
+      4C4:
+        mean: 420.0
+      4D4:
+        mean: 175.0
+      4F4:
+        mean: 120.0
+      4G4:
+        mean: 180.0
+      4H4:
+        mean: 124.0
+      4I4:
+        mean: 80.0
+      5C4:
+        mean: 240.0
+      5D4:
+        mean: 215.0
+      5F4:
+        mean: 120.0
+      5G4:
+        mean: 240.0
+      5H4:
+        mean: 124.0
+      5I4:
+        mean: 80.0
+      6C4:
+        mean: 240.0
+      6D4:
+        mean: 195.0
+      6F4:
+        mean: 120.0
+      6G4:
+        mean: 180.0
+      6H4:
+        mean: 240.0
+      6I4:
+        mean: 100.0
+      7C4:
+        mean: 300.0
+      7D4:
+        mean: 190.0
+      7F4:
+        mean: 120.0
+      7G4:
+        mean: 240.0
+      7H4:
+        mean: 240.0
+      7I4:
+        mean: 100.0
+      8C4:
+        mean: 300.0
+      8D4:
+        mean: 205.0
+      8F4:
+        mean: 160.0
+      8G4:
+        mean: 180.0
+      8H4:
+        mean: 180.0
+      8I4:
+        mean: 120.0
+      9C4:
+        mean: 240.0
+      9D4:
+        mean: 280.0
+      9F4:
+        mean: 180.0
+      9G4:
+        mean: 240.0
+      9H4:
+        mean: 180.0
+      9I4:
+        mean: 80.0
+  '1215':
+    room:
+      0C4:
+        mean: 199.0
+      0D4:
+        mean: 245.0
+      0F4:
+        mean: 160.0
+      0G4:
+        mean: 128.0
+      0H4:
+        mean: 180.0
+      0I4:
+        mean: 120.0
+      10C4:
+        mean: 480.0
+      10D4:
+        mean: 220.0
+      10F4:
+        mean: 160.0
+      10G4:
+        mean: 128.0
+      10H4:
+        mean: 240.0
+      10I4:
+        mean: 60.0
+      11C4:
+        mean: 360.0
+      11D4:
+        mean: 160.0
+      11F4:
+        mean: 120.0
+      11G4:
+        mean: 128.0
+      11H4:
+        mean: 124.0
+      11I4:
+        mean: 80.0
+      12C4:
+        mean: 360.0
+      12D4:
+        mean: 240.0
+      12F4:
+        mean: 200.0
+      12G4:
+        mean: 240.0
+      12H4:
+        mean: 180.0
+      12I4:
+        mean: 100.0
+      13C4:
+        mean: 300.0
+      13D4:
+        mean: 200.0
+      13F4:
+        mean: 200.0
+      13G4:
+        mean: 180.0
+      13H4:
+        mean: 180.0
+      13I4:
+        mean: 100.0
+      14C4:
+        mean: 240.0
+      14D4:
+        mean: 185.0
+      14F4:
+        mean: 180.0
+      14G4:
+        mean: 128.0
+      14H4:
+        mean: 124.0
+      14I4:
+        mean: 100.0
+      15C4:
+        mean: 300.0
+      15D4:
+        mean: 210.0
+      15F4:
+        mean: 160.0
+      15G4:
+        mean: 128.0
+      15H4:
+        mean: 180.0
+      15I4:
+        mean: 120.0
+      1C4:
+        mean: 420.0
+      1D4:
+        mean: 180.0
+      1F4:
+        mean: 160.0
+      1G4:
+        mean: 128.0
+      1H4:
+        mean: 240.0
+      1I4:
+        mean: 120.0
+      2C4:
+        mean: 360.0
+      2D4:
+        mean: 170.0
+      2F4:
+        mean: 100.0
+      2G4:
+        mean: 240.0
+      2H4:
+        mean: 240.0
+      2I4:
+        mean: 80.0
+      3C4:
+        mean: 240.0
+      3D4:
+        mean: 165.0
+      3F4:
+        mean: 140.0
+      3G4:
+        mean: 240.0
+      3H4:
+        mean: 180.0
+      3I4:
+        mean: 120.0
+      4C4:
+        mean: 300.0
+      4D4:
+        mean: 225.0
+      4F4:
+        mean: 180.0
+      4G4:
+        mean: 300.0
+      4H4:
+        mean: 240.0
+      4I4:
+        mean: 80.0
+      5C4:
+        mean: 360.0
+      5D4:
+        mean: 185.0
+      5F4:
+        mean: 180.0
+      5G4:
+        mean: 128.0
+      5H4:
+        mean: 180.0
+      5I4:
+        mean: 120.0
+      6C4:
+        mean: 240.0
+      6D4:
+        mean: 245.0
+      6F4:
+        mean: 140.0
+      6G4:
+        mean: 240.0
+      6H4:
+        mean: 180.0
+      6I4:
+        mean: 100.0
+      7C4:
+        mean: 360.0
+      7D4:
+        mean: 200.0
+      7F4:
+        mean: 140.0
+      7G4:
+        mean: 128.0
+      7H4:
+        mean: 180.0
+      7I4:
+        mean: 80.0
+      8C4:
+        mean: 300.0
+      8D4:
+        mean: 160.0
+      8F4:
+        mean: 180.0
+      8G4:
+        mean: 240.0
+      8H4:
+        mean: 300.0
+      8I4:
+        mean: 80.0
+      9C4:
+        mean: 300.0
+      9D4:
+        mean: 125.0
+      9F4:
+        mean: 160.0
+      9G4:
+        mean: 240.0
+      9H4:
+        mean: 240.0
+      9I4:
+        mean: 80.0
+  '1434':
+    room:
+      0C4:
+        mean: 300.0
+      0D4:
+        mean: 240.0
+      0F4:
+        mean: 200.0
+      0G4:
+        mean: 240.0
+      0H4:
+        mean: 240.0
+      0I4:
+        mean: 60.0
+      10C4:
+        mean: 360.0
+      10D4:
+        mean: 150.0
+      10F4:
+        mean: 160.0
+      10G4:
+        mean: 180.0
+      10H4:
+        mean: 180.0
+      10I4:
+        mean: 80.0
+      11C4:
+        mean: 360.0
+      11D4:
+        mean: 200.0
+      11F4:
+        mean: 180.0
+      11G4:
+        mean: 300.0
+      11H4:
+        mean: 180.0
+      11I4:
+        mean: 100.0
+      12C4:
+        mean: 360.0
+      12D4:
+        mean: 200.0
+      12F4:
+        mean: 160.0
+      12G4:
+        mean: 180.0
+      12H4:
+        mean: 180.0
+      12I4:
+        mean: 80.0
+      13C4:
+        mean: 360.0
+      13D4:
+        mean: 200.0
+      13F4:
+        mean: 180.0
+      13G4:
+        mean: 180.0
+      13H4:
+        mean: 300.0
+      13I4:
+        mean: 80.0
+      14C4:
+        mean: 420.0
+      14D4:
+        mean: 215.0
+      14F4:
+        mean: 180.0
+      14G4:
+        mean: 180.0
+      14H4:
+        mean: 300.0
+      14I4:
+        mean: 60.0
+      15C4:
+        mean: 300.0
+      15D4:
+        mean: 200.0
+      15F4:
+        mean: 160.0
+      15G4:
+        mean: 300.0
+      15H4:
+        mean: 180.0
+      15I4:
+        mean: 120.0
+      1C4:
+        mean: 420.0
+      1D4:
+        mean: 165.0
+      1F4:
+        mean: 160.0
+      1G4:
+        mean: 300.0
+      1H4:
+        mean: 240.0
+      1I4:
+        mean: 60.0
+      2C4:
+        mean: 300.0
+      2D4:
+        mean: 210.0
+      2F4:
+        mean: 180.0
+      2G4:
+        mean: 300.0
+      2H4:
+        mean: 240.0
+      2I4:
+        mean: 100.0
+      3C4:
+        mean: 300.0
+      3D4:
+        mean: 160.0
+      3F4:
+        mean: 160.0
+      3G4:
+        mean: 128.0
+      3H4:
+        mean: 180.0
+      3I4:
+        mean: 100.0
+      4C4:
+        mean: 300.0
+      4D4:
+        mean: 180.0
+      4F4:
+        mean: 120.0
+      4G4:
+        mean: 300.0
+      4H4:
+        mean: 240.0
+      4I4:
+        mean: 100.0
+      5C4:
+        mean: 300.0
+      5D4:
+        mean: 130.0
+      5F4:
+        mean: 180.0
+      5G4:
+        mean: 180.0
+      5H4:
+        mean: 180.0
+      5I4:
+        mean: 60.0
+      6C4:
+        mean: 300.0
+      6D4:
+        mean: 165.0
+      6F4:
+        mean: 160.0
+      6G4:
+        mean: 180.0
+      6H4:
+        mean: 124.0
+      6I4:
+        mean: 120.0
+      7C4:
+        mean: 199.0
+      7D4:
+        mean: 125.0
+      7F4:
+        mean: 200.0
+      7G4:
+        mean: 180.0
+      7H4:
+        mean: 300.0
+      7I4:
+        mean: 100.0
+      8C4:
+        mean: 240.0
+      8D4:
+        mean: 285.0
+      8F4:
+        mean: 180.0
+      8G4:
+        mean: 300.0
+      8H4:
+        mean: 240.0
+      8I4:
+        mean: 120.0
+      9C4:
+        mean: 420.0
+      9D4:
+        mean: 140.0
+      9F4:
+        mean: 160.0
+      9G4:
+        mean: 180.0
+      9H4:
+        mean: 124.0
+      9I4:
+        mean: 120.0
+  '1601':
+    room:
+      0C4:
+        mean: 240.0
+      0D4:
+        mean: 145.0
+      0F4:
+        mean: 200.0
+      0G4:
+        mean: 240.0
+      0H4:
+        mean: 180.0
+      0I4:
+        mean: 120.0
+      10C4:
+        mean: 300.0
+      10D4:
+        mean: 245.0
+      10F4:
+        mean: 160.0
+      10G4:
+        mean: 240.0
+      10H4:
+        mean: 300.0
+      10I4:
+        mean: 100.0
+      11C4:
+        mean: 300.0
+      11D4:
+        mean: 250.0
+      11F4:
+        mean: 200.0
+      11G4:
+        mean: 240.0
+      11H4:
+        mean: 180.0
+      11I4:
+        mean: 120.0
+      12C4:
+        mean: 360.0
+      12D4:
+        mean: 235.0
+      12F4:
+        mean: 160.0
+      12G4:
+        mean: 180.0
+      12H4:
+        mean: 240.0
+      12I4:
+        mean: 120.0
+      13C4:
+        mean: 420.0
+      13D4:
+        mean: 245.0
+      13F4:
+        mean: 140.0
+      13G4:
+        mean: 180.0
+      13H4:
+        mean: 180.0
+      13I4:
+        mean: 120.0
+      14C4:
+        mean: 240.0
+      14D4:
+        mean: 245.0
+      14F4:
+        mean: 200.0
+      14G4:
+        mean: 300.0
+      14H4:
+        mean: 240.0
+      14I4:
+        mean: 100.0
+      15C4:
+        mean: 480.0
+      15D4:
+        mean: 305.0
+      15F4:
+        mean: 160.0
+      15G4:
+        mean: 240.0
+      15H4:
+        mean: 124.0
+      15I4:
+        mean: 100.0
+      1C4:
+        mean: 199.0
+      1D4:
+        mean: 160.0
+      1F4:
+        mean: 200.0
+      1G4:
+        mean: 128.0
+      1H4:
+        mean: 240.0
+      1I4:
+        mean: 80.0
+      2C4:
+        mean: 360.0
+      2D4:
+        mean: 275.0
+      2F4:
+        mean: 160.0
+      2G4:
+        mean: 240.0
+      2H4:
+        mean: 180.0
+      2I4:
+        mean: 100.0
+      3C4:
+        mean: 240.0
+      3D4:
+        mean: 270.0
+      3F4:
+        mean: 160.0
+      3G4:
+        mean: 240.0
+      3H4:
+        mean: 180.0
+      3I4:
+        mean: 100.0
+      4C4:
+        mean: 360.0
+      4D4:
+        mean: 280.0
+      4F4:
+        mean: 180.0
+      4G4:
+        mean: 240.0
+      4H4:
+        mean: 300.0
+      4I4:
+        mean: 100.0
+      5C4:
+        mean: 360.0
+      5D4:
+        mean: 215.0
+      5F4:
+        mean: 140.0
+      5G4:
+        mean: 240.0
+      5H4:
+        mean: 240.0
+      5I4:
+        mean: 120.0
+      6C4:
+        mean: 360.0
+      6D4:
+        mean: 270.0
+      6F4:
+        mean: 200.0
+      6G4:
+        mean: 240.0
+      6H4:
+        mean: 180.0
+      6I4:
+        mean: 120.0
+      7C4:
+        mean: 480.0
+      7D4:
+        mean: 230.0
+      7F4:
+        mean: 200.0
+      7G4:
+        mean: 128.0
+      7H4:
+        mean: 240.0
+      7I4:
+        mean: 120.0
+      8C4:
+        mean: 300.0
+      8D4:
+        mean: 205.0
+      8F4:
+        mean: 200.0
+      8G4:
+        mean: 128.0
+      8H4:
+        mean: 300.0
+      8I4:
+        mean: 120.0
+      9C4:
+        mean: 360.0
+      9D4:
+        mean: 280.0
+      9F4:
+        mean: 180.0
+      9G4:
+        mean: 180.0
+      9H4:
+        mean: 240.0
+      9I4:
+        mean: 100.0
+  max:
+    room:
+      0C4:
+        mean: 480.0
+      0D4:
+        mean: 325.0
+      0F4:
+        mean: 200.0
+      0G4:
+        mean: 300.0
+      0H4:
+        mean: 300.0
+      0I4:
+        mean: 120.0
+      1C4:
+        mean: 480.0
+      1D4:
+        mean: 325.0
+      1F4:
+        mean: 200.0
+      1G4:
+        mean: 300.0
+      1H4:
+        mean: 300.0
+      1I4:
+        mean: 120.0
+      2C4:
+        mean: 480.0
+      2D4:
+        mean: 325.0
+      2F4:
+        mean: 200.0
+      2G4:
+        mean: 300.0
+      2H4:
+        mean: 300.0
+      2I4:
+        mean: 120.0
+      3C4:
+        mean: 480.0
+      3D4:
+        mean: 325.0
+      3F4:
+        mean: 200.0
+      3G4:
+        mean: 300.0
+      3H4:
+        mean: 300.0
+      3I4:
+        mean: 120.0
+      4C4:
+        mean: 480.0
+      4D4:
+        mean: 325.0
+      4F4:
+        mean: 200.0
+      4G4:
+        mean: 300.0
+      4H4:
+        mean: 300.0
+      4I4:
+        mean: 120.0
+      5C4:
+        mean: 480.0
+      5D4:
+        mean: 325.0
+      5F4:
+        mean: 200.0
+      5G4:
+        mean: 300.0
+      5H4:
+        mean: 300.0
+      5I4:
+        mean: 120.0
+      6C4:
+        mean: 480.0
+      6D4:
+        mean: 325.0
+      6F4:
+        mean: 200.0
+      6G4:
+        mean: 300.0
+      6H4:
+        mean: 300.0
+      6I4:
+        mean: 120.0
+      7C4:
+        mean: 480.0
+      7D4:
+        mean: 325.0
+      7F4:
+        mean: 200.0
+      7G4:
+        mean: 300.0
+      7H4:
+        mean: 300.0
+      7I4:
+        mean: 120.0
+      8C4:
+        mean: 480.0
+      8D4:
+        mean: 325.0
+      8F4:
+        mean: 200.0
+      8G4:
+        mean: 300.0
+      8H4:
+        mean: 300.0
+      8I4:
+        mean: 120.0
+      9C4:
+        mean: 480.0
+      9D4:
+        mean: 325.0
+      9F4:
+        mean: 200.0
+      9G4:
+        mean: 300.0
+      9H4:
+        mean: 300.0
+      9I4:
+        mean: 120.0
+      10C4:
+        mean: 480.0
+      10D4:
+        mean: 325.0
+      10F4:
+        mean: 200.0
+      10G4:
+        mean: 300.0
+      10H4:
+        mean: 300.0
+      10I4:
+        mean: 120.0
+      11C4:
+        mean: 480.0
+      11D4:
+        mean: 325.0
+      11F4:
+        mean: 200.0
+      11G4:
+        mean: 300.0
+      11H4:
+        mean: 300.0
+      11I4:
+        mean: 120.0
+      12C4:
+        mean: 480.0
+      12D4:
+        mean: 325.0
+      12F4:
+        mean: 200.0
+      12G4:
+        mean: 300.0
+      12H4:
+        mean: 300.0
+      12I4:
+        mean: 120.0
+      13C4:
+        mean: 480.0
+      13D4:
+        mean: 325.0
+      13F4:
+        mean: 200.0
+      13G4:
+        mean: 300.0
+      13H4:
+        mean: 300.0
+      13I4:
+        mean: 120.0
+      14C4:
+        mean: 480.0
+      14D4:
+        mean: 325.0
+      14F4:
+        mean: 200.0
+      14G4:
+        mean: 300.0
+      14H4:
+        mean: 300.0
+      14I4:
+        mean: 120.0
+      15C4:
+        mean: 480.0
+      15D4:
+        mean: 325.0
+      15F4:
+        mean: 200.0
+      15G4:
+        mean: 300.0
+      15H4:
+        mean: 300.0
+      15I4:
+        mean: 120.0
+time_share:
+  '127': 0.154354
+  '383': 0.153754
+  '707':  0.228829
+  '993': 0.121922
+  '1215': 0.137538
+  '1434': 0.127327
+  '1601': 0.076276 
+  max: 0.0

@@ -1,0 +1,60 @@
+units:
+  area: m^2
+  length: m
+  width: m
+  height: m
+  bending_radius: \?
+  # volume_flow_ratio is defined as: volume_flow_straight / volume_flow_in
+  volume_flow_ratio: \-
+  zeta: with respect to velocity^2, so dimensionless
+
+# von G -> H
+
+system:
+  width: 0.2
+  height: 0.2
+  elements:
+    1:
+      name: rect_branch
+      direction: bend
+      target_width: 0.4
+      target_height: 0.3
+      neighbour_width: 0.2
+      neighbour_height: 0.2
+      main_width: 0.2
+      main_height: 0.2
+      target_volume_flow: 0
+      main_volume_flow: 1
+    2:
+      name: duct
+      length: 8
+      width: 0.4
+      height: 0.3
+    3:
+      name: rect_branch
+      direction: bend
+      target_width: 0.2
+      target_height: 0.2
+      neighbour_width: 0.2
+      neighbour_height: 0.2
+      main_width: 0.4
+      main_height: 0.3
+      target_volume_flow: 0
+      main_volume_flow: 1
+    4:
+      name: duct
+      length: 1.5
+      width: 0.2
+      height: 0.2
+    5:
+      name: rect_bending
+      bending_radius: 0.45
+      bending_angle: 90
+      n_bendings: 1
+    6:
+      name: air_diffuser
+      comment: tellerventil, für flaechenberechnung so getan als sei es eckig
+      diffuser_type: quadratischer Vierwegedurchlass
+      outlet_location: im Raum
+      zeta: 33
+      

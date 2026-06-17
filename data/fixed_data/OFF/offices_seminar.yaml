@@ -1,0 +1,31 @@
+units:
+  area: m^2
+  length: m
+  width: m
+  height: m
+  bending_radius: \?
+  # volume_flow_ratio is defined as: volume_flow_straight / volume_flow_in
+  volume_flow_ratio: \-
+  zeta: with respect to velocity^2, so dimensionless
+
+
+system:
+  width: 0.2
+  height: 0.2
+  elements:
+    1:
+      name: reheater
+      zeta: 8
+    2:
+      name: rect_bending
+      bending_radius: 0.45
+      bending_angle: 90
+      n_bendings: 1
+    3:
+      name: air_diffuser
+      diffuser_type: quadratischer Vierwegedurchlass
+      comment: four way air diffuser
+      width: 0.2
+      height: 0.2
+      zeta: 33
+      outlet_location: im Raum

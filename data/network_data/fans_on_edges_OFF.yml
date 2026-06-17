@@ -1,0 +1,38 @@
+# the format of this yml file is Edges with fan stations on them. And then per edge you define which fan station is there and how many fans of this kind can be purchased.
+
+edges:
+  [Z0, Z1]: &central
+    [Fan1, 0.3]: 2
+    [Fan1, 0.5]: 2
+    [Fan2, 0.2]: 2
+    [Fan2, 0.4]: 2
+    [Fan3, 0.6]: 1
+    [Fan3, 0.8]: 1
+    [Fan3, 1.0]: 1
+    total: 3
+  [A2, A3]: *central
+  [15A0D, 15A0F]: *central
+  [14A0D, 14A0F]: *central
+  [13A0D, 13A0F]: *central
+  [12A0D, 12A0F]: *central
+  [11A0D, 11A0F]: *central
+  [10A0D, 10A0F]: *central
+  [9A0D, 9A0F]: *central
+  [8A0D, 8A0F]: *central
+  [7A0D, 7A0F]: *central
+  [6A0D, 6A0F]: *central
+  [5A0D, 5A0F]: *central
+  [4A0D, 4A0F]: *central
+  [3A0D, 3A0F]: *central
+  [2A0D, 2A0F]: *central
+  [1A0D, 1A0F]: *central
+  [B0, B1]: &distributed
+    [Fan2, 0.2]: 2
+    total: 2
+  [C0, C1]: *distributed
+  [D0, D1]: *distributed
+  [E0, E1]: *distributed
+  [F0, F1]: *distributed
+  [G0, G1]: *distributed
+  [H0, H1]: *distributed
+  [I0, I1]: *distributed

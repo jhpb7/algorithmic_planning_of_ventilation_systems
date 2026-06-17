@@ -1,0 +1,6 @@
+# the format of this yml file is Edges with fan stations on them. And then per edge you define which fan station is there and how many fans of this kind can be purchased.
+
+edges:
+  [0~1, '0~2']: &central
+    [Fan_real_GPZ, 0.4]: 2
+    total: 2
