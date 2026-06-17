@@ -621,15 +621,12 @@ def add_component_dimensions_from_duct_using_h5(
     out = out_adjacency(all_edges)
     inn = in_adjacency(all_edges)
 
-    print("TOOK Correct w.")
-    input("WRONG h instead of w")
-
     def quantize_hw(
         h: float, w: float, max_min_dimensions: List[float]
     ) -> tuple[float, float]:
         max_height, min_height, max_width, min_width = max_min_dimensions
         h = min(max_height, max(min_height, np.ceil(h * 10) / 10))
-        w = min(max_width, max(min_width, np.ceil(h * 10) / 10))
+        w = min(max_width, max(min_width, np.ceil(w * 10) / 10))
         return h, w
 
     def find_duct_or_fail(e: Edge) -> Edge:

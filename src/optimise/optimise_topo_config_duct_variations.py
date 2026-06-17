@@ -3,17 +3,15 @@ import os
 import pyomo.environ as pyo
 import uuid
 from pyomo2h5 import load_yaml, ConstraintTracker
-from src.preplanning.optimise import (
+from src.optimise import (
     adjust_opt_problem,
-    # optimal_preplanning_detailed_investcosts,
 )
-from src.conceptplanning.preprocessing import optimal_planning
-from src.preplanning.optimise.utils import run_initial_solve
-from src.preplanning.preprocessing.general_utils import (
+from src.pyomo_models import optimal_planning
+from src.optimise.utils import run_initial_solve
+from src.preprocessing.general_utils import (
     add_duct_zeta_flow_noise_and_dampening_from_h5,
     add_component_dimensions_from_duct_using_h5,
 )
-
 
 
 logging.basicConfig(
@@ -69,12 +67,6 @@ def main(
         instance_topo, MAX_VELOCITY, max_height
     )
 
-    # instance.min_lcc.deactivate()
-
-    # @instance.Objective(sense=pyo.minimize)
-    # def min_energy(m):
-    #     return m.fan_energy_costs + 1e-9*m.total_invest_costs
-
     filename = outfolder_path + filename_topology
 
     # max_load_case defines which load case is removed for postprocessing
@@ -91,17 +83,31 @@ def main(
 
     solver = pyo.SolverFactory("gurobi", solver_io="python")
 
-    additional_annotated_dict={"Optimization Type": {
-                "Control Strategy": {"Content": CONTROL_STRATEGY},
-                "Planning mode": {"Content": "Topology"},
-                "Connected Optimisation": {"Content": filename_configuration, "Metadata": {"Information": "Filename of Configuration Optimisation results hdf5 computed based on the results of this file"}}},
-                "Duct Variations": {
-                        "Maximum duct velocity in horizontal ducts": {
-                            "Content": max_velocity_horizontal, "Metadata": {"Unit": "m/s"}},
-                        "Maximum duct velocity in vertical ducts": {
-                            "Content": max_velocity_vertical, "Metadata": {"Unit": "m/s"}},
-                        "Maximum duct height in horizontal ducts": {
-                            "Content": max_height, "Metadata": {"Unit": "m"}}}
+    additional_annotated_dict = {
+        "Optimisation Type": {
+            "Control Strategy": {"Content": CONTROL_STRATEGY},
+            "Planning mode": {"Content": "Topology"},
+            "Connected Optimisation": {
+                "Content": filename_configuration,
+                "Metadata": {
+                    "Information": "Filename of Configuration Optimisation results hdf5 computed based on the results of this file"
+                },
+            },
+        },
+        "Duct Variations": {
+            "Maximum duct velocity in horizontal ducts": {
+                "Content": max_velocity_horizontal,
+                "Metadata": {"Unit": "m/s"},
+            },
+            "Maximum duct velocity in vertical ducts": {
+                "Content": max_velocity_vertical,
+                "Metadata": {"Unit": "m/s"},
+            },
+            "Maximum duct height in horizontal ducts": {
+                "Content": max_height,
+                "Metadata": {"Unit": "m"},
+            },
+        },
     }
 
     success = run_initial_solve(
@@ -172,9 +178,7 @@ def main(
         for e in instance_config.E_fan_station | instance_config.E_vfc:
             instance_config.ind_purchase[e].fix(instance_topo.ind_purchase[e])
         for f in instance_config.fan_set:
-            instance_config.fan_ind_purchase[f].fix(
-                instance_topo.fan_ind_purchase[f]
-            )
+            instance_config.fan_ind_purchase[f].fix(instance_topo.fan_ind_purchase[f])
 
     instance_all_acoustics = adjust_opt_problem.adjust_to_control_strategy(
         CONTROL_STRATEGY, model=model_all_acoustics, data=data_all_instances
@@ -182,17 +186,31 @@ def main(
 
     filename = outfolder_path + filename_configuration
 
-    additional_annotated_dict={"Optimization Type": {
-                    "Control Strategy": {"Content": CONTROL_STRATEGY},
-                    "Planning mode": {"Content": "Configuration"},
-                    "Connected Optimisation": {"Content": filename_topology, "Metadata": {"Information": "Filename of Topology Optimisation results hdf5 used for computing duct width and height and silencer, vfc dimensioning"}}},
-                    "Duct Variations": {
-                        "Maximum duct velocity in horizontal ducts": {
-                            "Content": max_velocity_horizontal, "Metadata": {"Unit": "m/s"}},
-                        "Maximum duct velocity in vertical ducts": {
-                            "Content": max_velocity_vertical, "Metadata": {"Unit": "m/s"}},
-                        "Maximum duct height in horizontal ducts": {
-                            "Content": max_height, "Metadata": {"Unit": "m"}}}
+    additional_annotated_dict = {
+        "Optimisation Type": {
+            "Control Strategy": {"Content": CONTROL_STRATEGY},
+            "Planning mode": {"Content": "Configuration"},
+            "Connected Optimisation": {
+                "Content": filename_topology,
+                "Metadata": {
+                    "Information": "Filename of Topology Optimisation results hdf5 used for computing duct width and height and silencer, vfc dimensioning"
+                },
+            },
+        },
+        "Duct Variations": {
+            "Maximum duct velocity in horizontal ducts": {
+                "Content": max_velocity_horizontal,
+                "Metadata": {"Unit": "m/s"},
+            },
+            "Maximum duct velocity in vertical ducts": {
+                "Content": max_velocity_vertical,
+                "Metadata": {"Unit": "m/s"},
+            },
+            "Maximum duct height in horizontal ducts": {
+                "Content": max_height,
+                "Metadata": {"Unit": "m"},
+            },
+        },
     }
 
     success = run_initial_solve(
@@ -220,10 +238,11 @@ def create_dir_if_not_existing(path):
     else:
         print(f"Directory {path} already exists!")
 
-INFILE = "opt_problems/preplanning/off/standard_case.yml"
-OUTFOLDER = "results/off/combined/duct_variations/"
+
+INFILE = "yaml_opt_input_files/GPZ/standard_case.yml"
+OUTFOLDER = "results/GPZ/"
 MAX_VELOCITY = None  # 5
-CAPEX_REDUCTION = None  # 0.5 # None
+CAPEX_REDUCTION = None  # 0.5
 CONTROL_STRATEGY = "VAV-VPC"
 FIX_ALL_FIRST_STAGE_DECISIONS = True
 
@@ -232,20 +251,8 @@ if __name__ == "__main__":
 
     max_velocity_vertical = [5, 8, 9, 10, 12]  #
     max_velocity_horizontal = [5, 8, 9, 10, 12]
-    max_height = [0.4]  # -999 #if None then height=width, if negative then turned off
+    max_height = [0.4]
     for m_h in max_height:
-        # for mv_v in max_velocity_vertical:
-        #     for mv_h in max_velocity_horizontal:
-        #         outfolder_path = (
-        #             f"max_velocity_{mv_h}_{mv_v}ms_max_height_{m_h}m/"
-        #             + CONTROL_STRATEGY
-        #             + "/"
-        #         )
-        #         create_dir_if_not_existing(OUTFOLDER + outfolder_path)
-        #         print(outfolder_path)
-        #         main(mv_h, mv_v, m_h, comment, OUTFOLDER + outfolder_path)
-
-
         for mv_v in max_velocity_vertical:
             outfolder_path = (
                 f"max_velocity_{mv_v}_{mv_v}ms_max_height_{m_h}m/"
@@ -255,18 +262,3 @@ if __name__ == "__main__":
             create_dir_if_not_existing(OUTFOLDER + outfolder_path)
             print(outfolder_path)
             main(mv_v, mv_v, m_h, comment, OUTFOLDER + outfolder_path)
-
-    # max_velocity_vertical = 10  #
-    # max_velocity_horizontal = 5
-    # max_height = [1, 0.5, 0.4, 0.3, 0.2]
-
-    # for m_h in max_height:
-
-    #     outfolder_path = (
-    #         f"max_velocity_{max_velocity_horizontal}_{max_velocity_vertical}ms_max_height_{m_h}m/"
-    #         + CONTROL_STRATEGY
-    #         + "/"
-    #     )
-    #     create_dir_if_not_existing(OUTFOLDER + outfolder_path)
-    #     print(outfolder_path)
-    #     main(mv_v, mv_v, m_h, comment, OUTFOLDER + outfolder_path)

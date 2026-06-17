@@ -3,8 +3,8 @@ import logging
 import pyomo.environ as pyo
 import uuid
 from pyomo2h5 import PyomoHDF5Saver
-from src.preplanning.postprocessing.postprocessing import postprocess
-from src.preplanning.debugging.debugging import calculate_IIS
+from src.postprocessing.postprocessing import postprocess
+from src.debugging.debugging import calculate_IIS
 
 
 def run_initial_solve(

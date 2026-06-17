@@ -3,13 +3,12 @@ import os
 import pyomo.environ as pyo
 import uuid
 from pyomo2h5 import load_yaml, ConstraintTracker, PyomoHDF5Saver
-from src.preplanning.optimise import (
+from src.optimise import (
     adjust_opt_problem,
-    # optimal_preplanning_detailed_investcosts,
 )
-from src.conceptplanning.preprocessing import optimal_planning
-from src.preplanning.optimise.utils import run_initial_solve
-from src.preplanning.preprocessing.general_utils import (
+from src.pyomo_models import optimal_planning
+from src.optimise.utils import run_initial_solve
+from src.preprocessing.general_utils import (
     add_duct_zeta_flow_noise_and_dampening_from_h5,
     add_component_dimensions_from_duct_using_h5,
 )
@@ -85,24 +84,6 @@ def main(cs, comment, topo_opt_flag=1, config_opt_flag=1, filename_topo_previous
             instance_topo, MAX_VELOCITY, MAX_HEIGHT
         )
 
-        # input("FORCED TO BUY ONE DISTRIBUTED")
-        # @instance_topo.Constraint(instance_topo.Scenarios)
-        # def forced_to_buy_n_fans(m, s):
-        #     return sum(m.scenario[s].ind_active[e] for e in m.E_fan_station - m.E_fan_station_central) == 1
-        # instance_topo.min_lcc.deactivate()
-
-
-        # @instance_topo.Objective(sense=pyo.minimize)
-        # def total_duct_costs(m):
-        #     return m.total_duct_costs + 1e-9*m.total_invest_costs + 1e-9*m.fan_energy_costs
-
-        # @instance_topo.Constraint(model.E_duct)
-        # def height_equal_to_width(m,i,j):
-        #     return m.duct_height[i,j] == m.duct_width[i,j]
-        # @instance_topo.Objective(sense=pyo.minimize)
-        # def min_duct_volume(m):
-        #     return sum(m.duct_height[i,j] * m.duct_width[i,j] * m.duct_length[i,j] for (i,j) in m.E_duct) + 1e-9* m.fan_energy_costs + 1e-9*m.total_invest_costs
-
         filename = OUTFOLDER + cs + "/" + filename_topology
 
         if "max_volume_flow_scenario" in data:
@@ -113,7 +94,7 @@ def main(cs, comment, topo_opt_flag=1, config_opt_flag=1, filename_topo_previous
             max_load_case = None
 
         additional_annotated_dict = {
-            "Optimization Type": {
+            "Optimisation Type": {
                 "Control Strategy": {"Content": cs},
                 "Planning mode": {"Content": "Topology"},
                 "Connected Optimisation": {
@@ -158,7 +139,6 @@ def main(cs, comment, topo_opt_flag=1, config_opt_flag=1, filename_topo_previous
             data, path_h5file, cs
         )
 
-
         velocity_constraint = 1  # if MAX_VELOCITY is not None else 0
         ## ) optimal_preplanning_detailed_investcosts.model(
         model = optimal_planning.model(
@@ -196,11 +176,6 @@ def main(cs, comment, topo_opt_flag=1, config_opt_flag=1, filename_topo_previous
             cs, model=model, data=data
         )
 
-        # @instance_config.Constraint(instance_config.max_noise_scenarios, instance_config.V_room)
-        # def limit_noise(m, s, v):
-        #     return m.scenario[s].sound_pressure_level_room[v] <= 25
-        # input("NOISE LIMIT IS ACTIVE HERE!! at 25 dB")
-
         if FIX_ALL_FIRST_STAGE_DECISIONS:
             for e in instance_config.E_fan_station | instance_config.E_vfc:
                 instance_config.ind_purchase[e].fix(instance_topo.ind_purchase[e])
@@ -223,7 +198,7 @@ def main(cs, comment, topo_opt_flag=1, config_opt_flag=1, filename_topo_previous
             max_load_case = None
 
         additional_annotated_dict = {
-            "Optimization Type": {
+            "Optimisation Type": {
                 "Control Strategy": {"Content": cs},
                 "Planning mode": {"Content": "Configuration"},
                 "Connected Optimisation": {
@@ -261,10 +236,9 @@ def create_dir_if_not_existing(path):
         print(f"Directory {path} already exists!")
 
 
+INFILE = "yaml_opt_input_files/GPZ/standard_case.yml"
 
-INFILE = "opt_problems/preplanning/off/standard_case_one_room_with_bigger_pressure.yml"
 
-# input(f"STARTING WITH INPUT FILE {INFILE}")
 MAX_VELOCITY = None  # 5
 MAX_VELOCITY_VERTICAL = 10
 MAX_VELOCITY_HORIZONTAL = 5
@@ -272,7 +246,7 @@ MAX_HEIGHT = 0.4  # -999 #if None then height=width, if negative then turned off
 CAPEX_REDUCTION = 1  # None
 FIX_ALL_FIRST_STAGE_DECISIONS = True
 
-OUTFOLDER = f"results/off/combined/one_room_with_bigger_pressure/max_velocity_5_10ms_max_height_04m/"
+OUTFOLDER = "results/GPZ/"
 
 
 if __name__ == "__main__":
@@ -300,12 +274,22 @@ if __name__ == "__main__":
             OUTFOLDER + cs,
         )
         print(cs)
-        main(
-            cs,
-            comment,
-            topo_opt_flag=topo_opt_flag,
-            config_opt_flag=config_opt_flag)
-        #     filename_topo_previous=previous_files_folder + cs + "/" + filename_topo_previous[cs],
-        # )
 
-        #
+        if topo_opt_flag:
+            main(
+                cs,
+                comment,
+                topo_opt_flag=topo_opt_flag,
+                config_opt_flag=config_opt_flag,
+            )
+        else:
+            main(
+                cs,
+                comment,
+                topo_opt_flag=topo_opt_flag,
+                config_opt_flag=config_opt_flag,
+                filename_topo_previous=previous_files_folder
+                + cs
+                + "/"
+                + filename_topo_previous[cs],
+            )

@@ -17,24 +17,19 @@ from src.preprocessing.domain_utils import (
     filter_hyperplanes,
     get_duct_max_dimensions,
 )
-from src.preprocessing.duplicate_floors_utils import (
-    duplicate_floors_add_connectors,
-)
+
+OUT_FOLDER = "opt_problems/preplanning/GPZ/"
+OUT_FILENAME = "real_GPZ"
+
+
+NETWORK_DATA_FILE = "data/network_data/real_GPZ.yml"
+DUCT_DATA_FILE = "data/duct_data/duct_hyperplanes.yml"
+FAN_DATA_FILE = "data/fan_data/fan_power_loss_hyperplanes_real_GPZ.yml"
+FANS_ON_EDGES_FILE = "data/network_data/fans_on_edges_real_GPZ.yml"
+FIXED_DATA_FOLDER = "data/fixed_data/GPZ/acoustic_element/"
 
 
 def main():
-    OUT_FOLDER = "opt_problems/preplanning/GPZ/"
-    OUT_FILENAME = "real_GPZ"
-    DUPLICATE_FLOORS = (
-        False  # if True multiple identical copies of the same floor are added
-    )
-    N_FLOORS = -3
-
-    NETWORK_DATA_FILE = "data/network_data/real_GPZ.yml"
-    DUCT_DATA_FILE = "data/duct_data/duct_hyperplanes.yml"
-    FAN_DATA_FILE = "data/fan_data/fan_power_loss_hyperplanes_real_GPZ.yml"
-    FANS_ON_EDGES_FILE = "data/network_data/fans_on_edges_real_GPZ.yml"
-    FIXED_DATA_FOLDER = "data/fixed_data/GPZ/acoustic_element/"
 
     data = load_yaml(NETWORK_DATA_FILE)
     data = compute_fixed_zeta_from_yaml(data, FIXED_DATA_FOLDER)
@@ -62,9 +57,6 @@ def main():
 
     data.update(prepare_fan_on_edges(fans_on_edges))
 
-    if DUPLICATE_FLOORS:
-        print(f"Scaling to {N_FLOORS} floors")
-        data = duplicate_floors_add_connectors(data, N_FLOORS)
     data = compute_flow_noise_and_dampening_dicts_from_yaml(data, FIXED_DATA_FOLDER)
     max_volume_flow_in_problem = get_max_volume_flow_in_problem(data)
     max_pressure_in_problem = data["max_pressure"][None]

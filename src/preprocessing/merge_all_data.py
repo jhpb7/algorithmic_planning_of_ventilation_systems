@@ -23,31 +23,40 @@ from src.preprocessing.duplicate_floors_utils import (
 )
 
 
+BUILDING_NAME = "GPZ"
+
+OUT_FOLDER = f"yaml_opt_input_files/{BUILDING_NAME}/"
+OUT_FILENAME = "standard_casess"
+
+
 def main():
-    OUT_FOLDER = "opt_problems/preplanning/off/"
-    OUT_FILENAME = "standard_case_k-medoid"
-    DUPLICATE_FLOORS = (
-        None  # True  # if True multiple identical copies of the same floor are added
-    )
-    N_FLOORS = 16
 
-    NETWORK_DATA_FILE = "data/network_data/OFF.yml"
-    DUCT_DATA_FILE = "data/duct_data/duct_hyperplanes_OFF.yml"  # OFF
-    FAN_DATA_FILE = "data/fan_data/fan_power_loss_hyperplanes_OFF.yml"
-    FANS_ON_EDGES_FILE = "data/network_data/fans_on_edges_OFF.yml"
-    FIXED_DATA_FOLDER = "data/fixed_data/OFF/"
+    if BUILDING_NAME == "GPZ":
+        n_floors = 1
+        duplicate_floors = False
 
-    FLOOR_ENTRANCE_NODE = "A0"  # hof: "zS"  # off: "A0"
+    elif BUILDING_NAME == "OFF":
+        n_floors = 16
+        duplicate_floors = True
+        floor_entrance_node = "A0"
+    else:
+        raise ValueError(
+            f"Building name is {BUILDING_NAME} but should be either 'GPZ' or 'OFF'"
+        )
 
-    data = load_yaml(NETWORK_DATA_FILE)
-    data = compute_fixed_zeta_from_yaml(data, FIXED_DATA_FOLDER)
+    network_data_file = f"data/network_data/{BUILDING_NAME}.yml"
+    duct_data_file = f"data/duct_data/duct_hyperplanes_{BUILDING_NAME}.yml"
+    fan_data_file = f"data/fan_data/fan_power_loss_hyperplanes_{BUILDING_NAME}.yml"
+    fans_on_edges_file = f"data/network_data/fans_on_edges_{BUILDING_NAME}.yml"
+    fixed_data_folder = f"data/fixed_data/{BUILDING_NAME}/"
+    scenario_data_file = f"data/load_case_data/{BUILDING_NAME}_load_cases.yml"
 
-    scenario_data_file = (
-        "data/load_case_data/processed_OFF_load_cases_k_medoid_generated.yml"
-    )
+    data = load_yaml(network_data_file)
+    data = compute_fixed_zeta_from_yaml(data, fixed_data_folder)
+
     load_case_data = load_yaml(scenario_data_file)
 
-    fans_on_edges = load_yaml(FANS_ON_EDGES_FILE)
+    fans_on_edges = load_yaml(fans_on_edges_file)
 
     data.update(prepare_load_case_yaml(load_case_data))
 
@@ -55,7 +64,7 @@ def main():
     max_volume_flow_in_problem = get_max_volume_flow_in_problem(data)
     max_pressure_in_problem = data["max_pressure"][None]
 
-    duct_data = load_yaml(DUCT_DATA_FILE)
+    duct_data = load_yaml(duct_data_file)
 
     duct_edge_max_dimensions, max_width, max_height = get_duct_max_dimensions(data)
 
@@ -63,16 +72,17 @@ def main():
         filter_hyperplanes(duct_data, max_width, max_height, duct_edge_max_dimensions)
     )
 
-    fan_data = load_yaml(FAN_DATA_FILE)
+    fan_data = load_yaml(fan_data_file)
 
     data.update(prepare_fan_on_edges(fans_on_edges))
 
-    if DUPLICATE_FLOORS:
-        print(f"Scaling to {N_FLOORS} floors")
-        data = duplicate_floors_add_connectors(data, N_FLOORS, FLOOR_ENTRANCE_NODE)
-    data = compute_flow_noise_and_dampening_dicts_from_yaml(data, FIXED_DATA_FOLDER)
-    print("WARNING -- NO CROSSTALKING!")
-    # data = compute_crosstalk_dampening(data, FIXED_DATA_FOLDER)
+    if duplicate_floors:
+        print(f"Scaling to {n_floors} floors")
+        data = duplicate_floors_add_connectors(data, n_floors, floor_entrance_node)
+    data = compute_flow_noise_and_dampening_dicts_from_yaml(data, fixed_data_folder)
+
+    if BUILDING_NAME == "OFF":
+        data = compute_crosstalk_dampening(data, fixed_data_folder)
 
     max_volume_flow_in_problem = get_max_volume_flow_in_problem(data)
     max_pressure_in_problem = data["max_pressure"][None]
