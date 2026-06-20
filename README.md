@@ -143,7 +143,9 @@ The plotting code is therefore meant to document and reproduce the figure-genera
 
 ## Workflow overview
 
-A detailed overview of the workflow is given in `docs/` with all `python` and `yaml` files needed to preprocess, optimise and postprocess. 
+The detailed workflow use to preprocess, optimise and postprocess is as follows:
+
+![Workflow](docs/workflow.svg)
 
 
 ## Reproducing dissertation results
