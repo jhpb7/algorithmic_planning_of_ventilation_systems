@@ -23,10 +23,10 @@ from src.preprocessing.duplicate_floors_utils import (
 )
 
 
-BUILDING_NAME = "GPZ"
+BUILDING_NAME = "OFF"
 
 OUT_FOLDER = f"yaml_opt_input_files/{BUILDING_NAME}/"
-OUT_FILENAME = "standard_casess"
+OUT_FILENAME = "standard_case"
 
 
 def main():
