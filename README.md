@@ -2,7 +2,7 @@
 
 Code used for the dissertation *Algorithmische Systemplanung raumlufttechnischer Anlagen*.
 
-This repository contains the optimisation, preprocessing, postprocessing, and plotting code for algorithmic system planning of ventilation systems. It extends the earlier topology-optimisation code base by also including configuration optimisation. The framework covers duct sizing, fan placement, fan operation, control strategy selection, load-case generation, acoustic postprocessing, and result evaluation.
+This repository contains the optimisation, preprocessing, postprocessing, and plotting code for algorithmic system planning of ventilation systems. The framework covers on the technical side: duct sizing, fan placement, fan operation, control strategy selection and on the objective side: life-cycle costs (capital costs and energy costs), energy consumption and acoustic comfort.
 
 The repository is intended as a research companion to the dissertation. It provides the code and input structures used to generate, evaluate, and visualise the optimisation results.
 
@@ -40,7 +40,7 @@ The repository provides:
 - optimisation scripts for different buildings, control strategies, duct constraints, and real-ductwork cases
 - postprocessing scripts and notebooks for analysing HDF5 optimisation results
 - plotting notebooks for figures used in the dissertation
-- Monte-Carlo and quasi-Monte-Carlo based reevaluation workflows for load-case studies
+- Monte-Carlo based reevaluation workflows for postprocessing of results
 
 The repository uses the following names for the three buildings from the PhD thesis:
 GPZ = Multifunktionsgebäude, OFF = Büroturm, LAB = Laborgebäude.
@@ -50,12 +50,14 @@ GPZ = Multifunktionsgebäude, OFF = Büroturm, LAB = Laborgebäude.
 ```text
 yaml_opt_input_files/      Optimisation input files
 
+results/                   Optimisation results, containing a single example hdf5 file
+
 data/
 ├── duct_data/             Preprocessed duct approximations
 ├── fan_data/              Fan data and fan approximations
 ├── load_case_data/        Raw, reduced, clustered, and sampled load cases
 ├── network_data/          Network definitions and fan-edge mappings
-└── vfc_sil_data/          Volume-flow-controller and silencer data
+└── vfc_sil_data/          Volume flow controller and silencer data
 
 src/
 ├── preprocessing/         Input generation and preprocessing
@@ -84,16 +86,16 @@ Load cases can be generated and evaluated in several ways:
 
 - deterministic load cases based on normative mean values
 - clustered load cases using Wasserstein-distance-based clustering (not part of the dissertation)
-- Monte-Carlo or quasi-Monte-Carlo load cases sampled from room-wise demand distributions
-- reevaluation load cases for analysing power consumption and robustness under many sampled demand states
+- quasi-Monte-Carlo load cases sampled from room-wise demand distributions using a Sobol sampling
+- reevaluation of optimisation solutions for analysing power consumption and acoustical comfort under many load cases
 
-The sampled load cases in `data/load_case_data/` are used for reevaluation and comparison of optimisation results. Sobol sampling is used for quasi-Monte-Carlo generation in parts of the workflow.
+The sampled load cases in `data/load_case_data/` are used as input and as reevaluation for the optimisation.
 
 ## Preprocessing
 
 Preprocessing scripts convert the individual input files into model-ready optimisation data.
 
-Typical steps are:
+Typical steps are (see workflow for more details):
 
 ```bash
 python -m src.preprocessing.create_duct_data
@@ -140,13 +142,13 @@ Postprocessing code is located in:
 src/postprocessing/
 ```
 
-The notebooks in `src/postprocessing/plot_result_figures/` were used to create dissertation result figures. Some plotting notebooks require HDF5 result files to be selected manually. This is intentional: large optimisation result files are not stored directly in the repository but are provided through the accompanying research data publication ().
+The notebooks in `src/postprocessing/plot_result_figures/` were used to create dissertation result figures. Some plotting notebooks require HDF5 result files to be selected manually. This is intentional: large optimisation result files are not stored directly in the repository but are provided through the accompanying research data publication (https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/5171 ).
 
 The plotting code is therefore meant to document and reproduce the figure-generation workflow, not to provide a fully automated plotting command-line interface.
 
 ## Workflow overview
 
-The detailed workflow use to preprocess, optimise and postprocess is as follows:
+The detailed workflow used to preprocess, optimise and postprocess is as follows:
 
 ![Workflow](docs/workflow.svg)
 
@@ -159,8 +161,7 @@ A typical workflow is:
 
 1. Prepare the YAML input files.
 2. Run preprocessing to generate optimisation input YAML file.
-3. Run the optimisation script for the selected case study and control strategy.
-4. Save optimisation results with `pyomo2h5`.
+3. Run the optimisation script for the selected case study, control strategy and optimisation goal - saving of the optimisation results is performed automatically using `pyomo2h5`.
 5. Use the postprocessing notebooks to analyse the HDF5 files and generate figures.
 
 ## Notes on dependencies
