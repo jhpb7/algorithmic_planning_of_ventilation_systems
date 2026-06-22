@@ -11,7 +11,7 @@ The repository is intended as a research companion to the dissertation. It provi
 The following packages are required and are installed through `requirements.txt`:
 
 - `pyomo2h5`: reading and writing YAML and HDF5 optimisation result files
-- `underestimating-hyperplanes`: approximation of fan characteristic curves and duct pressure losses
+- `underestimating-hyperplanes`: relaxation of fan characteristic curves and duct pressure losses
 - `vensys-clustering`: generation and reduction of ventilation load cases
 
 All three packages are maintained under the same GitHub user and are referenced directly in `requirements.txt`.
@@ -42,6 +42,9 @@ The repository provides:
 - plotting notebooks for figures used in the dissertation
 - Monte-Carlo and quasi-Monte-Carlo based reevaluation workflows for load-case studies
 
+The repository uses the following names for the three buildings from the PhD thesis:
+GPZ = Multifunktionsgebäude, OFF = Büroturm, LAB = Laborgebäude.
+
 ## Repository structure
 
 ```text
@@ -68,9 +71,9 @@ The optimisation workflow is based on YAML input files. Important input groups a
 
 - `fan_data.yml`: fan characteristic data and fan approximation data
 - `duct_data.yml`: duct dimensions, constraints, pressure-loss approximations, and acoustic data
-- `network_data.yml`: ventilation network topology, nodes, edges, rooms, and duct connections
+- `network_data.yml`: ventilation network topology, nodes, edges, rooms, component placement, fixed component data, acoustic data
 - `load_case_data.yml`: room-wise volume-flow demands and time shares
-- `fans_on_edges.yml`: possible or fixed fan positions in the network
+- `fans_on_edges.yml`: possible fan positions in the network
 - `yaml_opt_input_files/*.yml`: complete optimisation case definitions
 
 The repository contains input data for the considered case studies, including office-building and multi-purpose-building variants.
